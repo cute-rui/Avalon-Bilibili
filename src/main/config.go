@@ -20,7 +20,7 @@ func confInit() {
     Conf.SetEnvKeyReplacer(replacer)
     err := Conf.ReadInConfig()
     if _, ok := err.(viper.ConfigFileNotFoundError); ok {
-        _, err := os.Create("./avalon-bilibili.toml")
+        _, err := os.Create("./soft/avalon/config/avalon-bilibili.toml")
         if err != nil {
             log.Println(err)
             return

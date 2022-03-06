@@ -566,14 +566,13 @@ func reqPgcURL(ep, cid int, bvid, shortTitle, subTitle string, index int32) ([]*
                 }
             } else {
                 if strings.Contains(d.Data.Dash.Video[j].Codecs, `av01`) {
-                    p.Title = StringBuilder(subTitle, `av01 codec - unstable`)
+                    p.Title = StringBuilder(subTitle, ` - av01 codec - unstable`)
                 } else {
                     p.Title = subTitle
                 }
                 
                 p.ID = bvid
                 p.CID = strconv.Itoa(cid)
-                p.Title = subTitle
                 p.SubTitle = shortTitle
                 p.Index = index
                 p.VideoQuality = getQualityString(videoquality)
