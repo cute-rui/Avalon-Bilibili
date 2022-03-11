@@ -556,7 +556,7 @@ func reqPgcURL(ep, cid int, bvid, shortTitle, subTitle string, index int32) ([]*
                         Index:        index,
                         ID:           bvid,
                         CID:          strconv.Itoa(cid),
-                        Title:        StringBuilder(p.GetSubTitle(), ` - Dolby Atmos`),
+                        Title:        StringBuilder(p.GetTitle(), ` - Dolby Atmos`),
                         SubTitle:     shortTitle,
                         VideoQuality: getQualityString(videoquality),
                         VideoURL:     d.Data.Dash.Video[j].BaseUrl,
@@ -585,7 +585,7 @@ func reqPgcURL(ep, cid int, bvid, shortTitle, subTitle string, index int32) ([]*
                         Index:        index,
                         ID:           bvid,
                         CID:          strconv.Itoa(cid),
-                        Title:        StringBuilder(p.GetSubTitle(), ` - Dolby Atmos`),
+                        Title:        StringBuilder(p.GetTitle(), ` - Dolby Atmos`),
                         SubTitle:     shortTitle,
                         VideoQuality: getQualityString(videoquality),
                         VideoURL:     d.Data.Dash.Video[j].BaseUrl,
@@ -600,7 +600,6 @@ func reqPgcURL(ep, cid int, bvid, shortTitle, subTitle string, index int32) ([]*
             p.Title = StringBuilder(subTitle, ` - Dolby Vision`)
             p.ID = bvid
             p.CID = strconv.Itoa(cid)
-            p.Title = subTitle
             p.SubTitle = shortTitle
             p.Index = index
             p.VideoQuality = getQualityString(videoquality)
