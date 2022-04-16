@@ -108,6 +108,7 @@ func seasonQuery(s *episodeOrSeasonInfo, m *bilibili.Query, region bilibili.Regi
         Detail := bilibili.QueryInfo{
             Index:  int32(i),
             ID:     strconv.Itoa(s.Result.Episodes[i].Id),
+            BVID:   &s.Result.Episodes[i].Bvid,
             Region: &region,
         }
         m.Detail = append(m.GetDetail(), &Detail)
