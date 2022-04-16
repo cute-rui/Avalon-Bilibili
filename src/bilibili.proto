@@ -119,6 +119,8 @@ message DownloadInfo {
   string Msg = 2;
 
   repeated PartInfo Detail = 3;
+
+  DataType Type = 4;
 }
 
 message PartInfo {

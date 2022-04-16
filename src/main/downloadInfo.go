@@ -43,6 +43,7 @@ func videoDownloadInfoProc(id string, s *singleVideoInfo, downloadInfoResult *bi
     
     downloadInfoResult.Code = 0
     downloadInfoResult.Msg = `OK`
+    downloadInfoResult.Type = bilibili.DataType_Video
     
     d := Details(downloadInfoResult.Detail)
     sort.Sort(d)
@@ -74,6 +75,7 @@ func episodeDownloadInfoProc(id string, seasonInfo *episodeOrSeasonInfo, downloa
     
     downloadInfoResult.Code = 0
     downloadInfoResult.Msg = `OK`
+    downloadInfoResult.Type = bilibili.DataType_Season
     
     d := Details(downloadInfoResult.Detail)
     sort.Sort(d)
