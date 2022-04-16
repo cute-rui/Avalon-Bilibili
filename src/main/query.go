@@ -143,6 +143,11 @@ func collectionQuery(s *collectionType, m *bilibili.Query) error {
     m.ID = strconv.Itoa(s.Data.Meta.Mid)
     m.Type = bilibili.DataType_Collection
     m.CollectionTitle = &s.Data.Meta.Name
+    if len(m.Detail) > 0 {
+        author := m.Detail[0].GetAuthor()
+        m.Author = &author
+    }
+    
     return nil
 }
 
