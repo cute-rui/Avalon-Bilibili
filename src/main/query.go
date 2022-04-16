@@ -140,7 +140,7 @@ func collectionQuery(s *collectionType, m *bilibili.Query) error {
     
     m.Code = 0
     m.Msg = `OK`
-    m.ID = strconv.Itoa(s.Data.Meta.Mid)
+    m.ID = strconv.Itoa(s.Data.Meta.SeasonId)
     m.Type = bilibili.DataType_Collection
     m.CollectionTitle = &s.Data.Meta.Name
     if len(m.Detail) > 0 {
